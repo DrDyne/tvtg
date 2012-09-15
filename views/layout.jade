@@ -1,11 +1,11 @@
 doctype 5
 html
   head
-    title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
     block style
       style('rel=yo')
   body
+    include header
     include menu
 
     block content

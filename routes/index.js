@@ -11,6 +11,6 @@ exports.index = function(req, res){
 
 exports.post = function(req, res ) {
   // should fetch data from DB
-  var post = {title : 'meh post !', caption: 'miffy le lapin', age: 0};
-  res.render('post', { data : post });
+  var article = {title : 'meh post !', caption: 'miffy le lapin', age: 0};
+  res.render('post', { article : article });
 };
