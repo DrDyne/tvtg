@@ -4,14 +4,12 @@
  */
 
 var express = require('express')
-  , routes = require('./routes')
-  , user   = require('./routes/user')
+  , routes = require('./routes/index')
   , http   = require('http')
   , path   = require('path')
   , stylus = require('stylus')
+  , app = express()
   ;
-
-var app = express();
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -39,7 +37,7 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
-app.get('/users', user.list);
+app.get('/posts/:id', routes.post);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
