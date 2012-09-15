@@ -1,7 +1,19 @@
+
+/* line 1 : /home/dyne/git/tvtg/node_modules/stylus/lib/functions/index.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/node_modules\/stylus\/lib\/functions\/index\.styl}line{font-family:\000031}}
+
+/* line 1 : /home/dyne/git/tvtg/views/stylesheets/style.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/style\.styl}line{font-family:\000031}}
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+
+/* line 5 : /home/dyne/git/tvtg/views/stylesheets/style.styl */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/style\.styl}line{font-family:\000035}}
 a {
   color: #00b7ff;
 }

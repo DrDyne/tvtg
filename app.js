@@ -5,9 +5,9 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , user = require('./routes/user')
-  , http = require('http')
-  , path = require('path')
+  , user   = require('./routes/user')
+  , http   = require('http')
+  , path   = require('path')
   , stylus = require('stylus')
   ;
 
@@ -17,19 +17,21 @@ app.configure(function(){
   app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
-  app.use(express.favicon());
-  app.use(express.logger('dev'));
-  app.use(express.bodyParser());
-  app.use(express.methodOverride());
-  app.use(app.router);
   app.use(stylus.middleware( { src  : __dirname + '/views'
                              , dest : __dirname + '/public'
                              , debug: true
                              , force: true
+                             , firebug : true
+                             , linenos : true
                              }
                            )
          );
-  app.use(express.static(path.join(__dirname + 'public')));
+  app.use(express.favicon());
+  app.use(express.logger('dev'));
+  app.use(express.bodyParser());
+  app.use(express.methodOverride());
+  app.use(express.static(__dirname + '/public'));
+  app.use(app.router);
 });
 
 app.configure('development', function(){
