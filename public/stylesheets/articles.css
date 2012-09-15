@@ -1,0 +1,27 @@
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/node_modules\/stylus\/lib\/functions\/index\.styl}line{font-family:\000031}}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\000031}}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\000032}}
+.articles .tvtg {
+  width: auto;
+  padding-right: 10px;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\000035}}
+.articles .tvtg:before {
+  content: "T'es vraiment trop geek quand...";
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\000037}}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\000038}}
+.articles .article #controls {
+  padding-left: 10px;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\0000310}}
+.articles .article #controls .delete-post {
+  cursor: pointer;
+}
