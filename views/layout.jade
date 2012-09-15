@@ -3,5 +3,11 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    block style
+      style('rel=yo')
   body
+    include menu
+
     block content
+
+    block footer

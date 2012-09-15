@@ -7,7 +7,9 @@ var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , stylus = require('stylus')
+  ;
 
 var app = express();
 
@@ -20,11 +22,18 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
-  app.use(express.static(path.join(__dirname, 'public')));
+  app.use(stylus.middleware( { src  : __dirname + '/views'
+                             , dest : __dirname + '/public'
+                             , debug: true
+                             , force: true
+                             }
+                           )
+         );
+  app.use(express.static(path.join(__dirname + 'public')));
 });
 
 app.configure('development', function(){
-  app.use(express.errorHandler());
+  app.use(express.errorHandler({dumpExceptions:true, showStack:true}));
 });
 
 app.get('/', routes.index);
