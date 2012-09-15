@@ -20,7 +20,7 @@ app.configure(function(){
                              , debug: true
                              , force: true
                              , firebug : true
-                             , linenos : true
+                             //, linenos : true
                              }
                            )
          );
@@ -38,6 +38,7 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.get('/posts/:id', routes.post);
+app.get('/auth', routes.auth);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

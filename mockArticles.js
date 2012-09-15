@@ -42,9 +42,9 @@ ArticleProvider.prototype.save = function(articles, callback) {
 
 /* Lets bootstrap with dummy data */
 new ArticleProvider().save([
-      {title: 'Post one', caption: 'Body one', image: '', age: 0},
-      {title: 'Post two', caption: 'Body two'},
-      {title: 'Post three', body: 'Body three'}
+      {id: 1, title: 'Post one', caption: 'Body one', image: '', age: 0},
+      {id: 2, title: 'Post two', caption: 'Body two'},
+      {id: 3, title: 'Post three', body: 'Body three'}
     ], function(error, articles){});
 
 exports.ArticleProvider = ArticleProvider;

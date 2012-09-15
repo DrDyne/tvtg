@@ -1,4 +1,7 @@
-ul
+ul.unstyled
   li: a(href='/') Home
   li: a(href='/posts/random') Random post
-  li: input(id='search', placeholder='hack here...')
+  li
+    .input-prepend
+      span.add-on: i.icon-search
+      input#search(type='search', placeholder='hack your search here...')

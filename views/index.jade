@@ -1,10 +1,11 @@
 extends layout
 block append style
-  style('rel=yeah')
+  link(rel='stylesheet', href='/stylesheets/articles.css')
 
 block mixins
   include mixins/articles
 
 block content
-  - each article in articles
-    mixin render_article(article)
+  ul.articles.unstyled
+    - each article in articles
+      mixin render_article(article)

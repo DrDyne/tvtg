@@ -1,3 +1,8 @@
-mixin render_article(article)
-  h1=article.title
-  span=article.caption
+mixin render_article(article, admin)
+  li.article
+    span.tvtg
+    span=article.title
+    - if (admin)
+      span#controls
+        include ../article_controls
+    h2=article.caption
