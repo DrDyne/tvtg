@@ -27,7 +27,7 @@ app.configure(function(){
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.cookieParser());
-  app.use(express.session());
+  app.use(express.session({secret:'tvtg'}));
   //  // Session options
   //  key cookie name defaulting to connect.sid
   //  store Session store instance
@@ -45,8 +45,8 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.get('/posts/:id', routes.post);
-
 app.post('/', routes.insertPost);
+app.delete('/posts/:id', routes.deletePost);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
