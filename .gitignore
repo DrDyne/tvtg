@@ -1,2 +1,2 @@
 *.sw[op]
-public/stylesheets/*.css
+*.css

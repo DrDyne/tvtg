@@ -5,6 +5,6 @@ mixin render_article(article, admin)
     .content
       .img
       - if (admin)
-        #controls
+        span.controls
           include ../article_controls
       h2=article.caption
