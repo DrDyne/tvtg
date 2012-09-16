@@ -24,3 +24,8 @@ exports.insertPost = function(req, res) {
   });
   res.render('index', { caption: req.param('caption'), articles: [] });
 };
+
+exports.deletePost = function(req, res) {
+  res.render('index', { caption: '', articles: []});
+  res.redirect('/');
+}
