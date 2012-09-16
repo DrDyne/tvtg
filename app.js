@@ -20,13 +20,20 @@ app.configure(function(){
                              , debug: true
                              , force: true
                              , firebug : true
-                             //, linenos : true
                              }
                            )
          );
   app.use(express.favicon());
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
+  app.use(express.cookieParser());
+  app.use(express.session());
+  //  // Session options
+  //  key cookie name defaulting to connect.sid
+  //  store Session store instance
+  //  fingerprint Custom fingerprint generating function
+  //  cookie Session cookie settings, defaulting to { path: '/', httpOnly: true, maxAge: 14400000 }
+  //  secret Secret string used to compute hash
   app.use(express.methodOverride());
   app.use(express.static(__dirname + '/public'));
   app.use(app.router);
@@ -38,7 +45,8 @@ app.configure('development', function(){
 
 app.get('/', routes.index);
 app.get('/posts/:id', routes.post);
-app.get('/auth', routes.auth);
+
+app.post('/', routes.insertPost);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
