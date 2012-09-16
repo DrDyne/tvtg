@@ -1,7 +1,12 @@
-$(function () {
-  $('.delete-post').toggle(function (event) {
-    $('#deletePost').animate({'margin-left':0});
-  }, function (event) {
-    $('#deletePost').animate({'margin-left':-73});
-  });
+!$(function () {
+  function bindDeletePostAnimation () {
+    $('.delete-post').toggle(function (event) {
+      $(this).parents('li').animate({'margin-right':'+=73'});
+    }, function (event) {
+      $(this).parents('li').animate({'margin-right':'-=73'});
+    });
+  }
+
+
+  bindDeletePostAnimation();
 });

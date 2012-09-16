@@ -7,15 +7,16 @@ var articleProvider = require('../mockArticles').ArticleProvider;
 
 exports.index = function(req, res){
   var articles = new ArticleProvider().findAll(function (err, articles) {
+    articles[0].ago = function () { return 'today' };
     res.render('index', { caption: '', articles : articles });
   });
 };
 
-exports.post = function(req, res ) {
+exports.post = function(req, res) {
   // should fetch data from DB instead of this ugly mock
-  var article = {id:0, title : 'meh post !', caption: 'miffy le lapin', age: 0};
+  var article = {id:0, title : 'meh post !', caption: 'miffy le lapin', age: 0, author:'dyne', ago:function(){}};
   // should also set a real value to admin
-  res.render('post', { caption: '', admin : true, article : article });
+  res.render('index', { caption: '', admin : true, articles : [article] });
 };
 
 exports.insertPost = function(req, res) {
