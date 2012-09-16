@@ -1,32 +1,57 @@
+.centered
+  display     :block
+  margin-left :auto
+  margin-right:auto
+
 .tvtg-label
   content: "T'es vraiment trop geek quand..."
 
 .articles
 
   .article
+    margin-bottom:60px
+
     #controls
       padding-left: 10px
       .delete-post
         cursor: pointer
 
-    .tvtg
-      width: auto
-      padding-right: 10px
-      &:before
-        @extend .tvtg-label
+    //.tvtg
+    //  width: auto
+    //  padding-right: 10px
+    //  &:before
+    //    @extend .tvtg-label
 
     .title
-      // moar
+      margin-left:216px
+      display: inline
 
     .content
+      @extend .centered
+      overflow: hidden
+      width:600px
+      //border: 1px dotted black
       .img
-        width:200px
-        height:200px
-        border: 1px solid black
+        padding:20px
+        img
+          @extend .centered
+          width: 400px
+          height: auto
       .controls
-        width: 150px
-        border: 1px dotted gray
+        float: right
+        .deletePost
+          margin-top: 1px
+          float:right
+          margin-right: -73px
 
-      #deletePost
-        margin-left: -73px
-
+    .footer
+      font-size: 10px
+      .author
+        float: right
+      .age
+        float: right
+    .separator
+      margin-top: 40px
+      @extend .centered
+      width:33%
+      border-bottom:1px dotted black

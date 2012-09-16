@@ -1,6 +1,71 @@
 body
-  padding: 50px
+  padding: 0px 60px 0px 60px
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
 
 a
   color: #00B7FF
+
+/* meh own */
+header-padding = 30px
+.console
+  color: white
+  font:18px "Monospace"
+
+.disapear
+  border:none
+  background:transparent
+
+/* end of meh own */
+
+.welcome-title
+  padding-top: header-padding
+
+.header
+  z-index:1
+  width:100%
+  line-height:26px
+  vertical-align: middle
+  top:0px
+  background:black
+  position:fixed
+  top:0px
+  left:0px
+  height: header-padding
+  form
+    .prompt
+      display:inline-block
+      @extends .console
+    margin: 0px
+    .terminal-cursor
+      @extend .disapear
+      @extend .console
+    #caption
+      @extend .disapear
+      @extend .console
+      position:fixed
+      display:inline
+      width:2000px
+    .addPost
+      margin:30px auto 0px auto
+      float:right
+      #image, #title, #submit, #password
+        display: none
+
+.menu
+  z-index:2
+  line-height:30px
+  width:100%
+  .menu-item
+    display:inline-block
+    padding-right: 10px
+    line-height: 20px
+    vertical-align: middle
+    &:before
+      content: ' | '
+    &:first-child:before
+      content:none
+    &:last-child
+      padding-right:0px
+      float:right
+      &:before
+        content:none

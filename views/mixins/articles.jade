@@ -1,10 +1,20 @@
 mixin render_article(article, admin)
   li.article
     span.tvtg
-    span.title=article.title
+    h2.title=article.caption
     .content
+      ul.controls.unstyled
+        li.deletePost.control
+          .input-prepend
+            .add-on.delete-post: i.icon-remove
+            input.delete.input-mini(type='password', post=article.id, placeholder='delete')
       .img
-      - if (admin)
-        span.controls
-          include ../article_controls
-      h2=article.caption
+        a(href='/posts/#{article.id}')
+          img.img-polaroid(src=caption.image || '/images/trollface.png')
+      span.footer
+        span.age &nbsp;#{article.ago()} 
+        span.author By #{article.author} 
+    .separator
+
+  block append js
+    mixin include_js('post')
