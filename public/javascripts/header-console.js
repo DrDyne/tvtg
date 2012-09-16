@@ -1,3 +1,3 @@
 $(function () {
-  $('#caption').bind('keypress', function showFields () { $('.header-toggle').show() })
+  $('#caption').bind('keypress', function showFields () { $('.header-toggle').fadeIn() })
 });
