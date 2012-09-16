@@ -1,8 +1,10 @@
 mixin render_article(article, admin)
   li.article
     span.tvtg
-    span=article.title
-    - if (admin)
-      span#controls
-        include ../article_controls
-    h2=article.caption
+    span.title=article.title
+    .content
+      .img
+      - if (admin)
+        #controls
+          include ../article_controls
+      h2=article.caption

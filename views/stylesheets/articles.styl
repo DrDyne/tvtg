@@ -2,15 +2,28 @@
   content: "T'es vraiment trop geek quand..."
 
 .articles
-  .tvtg
-    width: auto
-    padding-right: 10px
-    &:before
-      @extend .tvtg-label
+
   .article
     #controls
       padding-left: 10px
       .delete-post
         cursor: pointer
 
+    .tvtg
+      width: auto
+      padding-right: 10px
+      &:before
+        @extend .tvtg-label
+
+    .title
+      // moar
+
+    .content
+      .img
+        width:200px
+        height:200px
+        border: 1px solid black
+      #controls
+        width: 150px
+        border: 1px dotted gray
 
