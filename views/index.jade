@@ -2,9 +2,6 @@ extends layout
 block append style
   link(rel='stylesheet', href='/stylesheets/articles.css')
 
-block mixins
-  include mixins/articles
-
 block content
   ul.articles.unstyled
     - each article in articles

@@ -2,4 +2,7 @@ extends index
 
 block content
   ul.articles.unstyled
-    mixin render_article(article, true)
+    mixin render_article(article, admin)
+
+block append js
+  mixin include_js('post')

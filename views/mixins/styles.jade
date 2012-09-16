@@ -1,0 +1,5 @@
+mixin include_style(name)
+  link(rel='stylesheet', href='/stylesheets/#{name}.css')
+
+mixin include_js(name)
+  script(type='text/javascript', src='/javascripts/#{name}.js')

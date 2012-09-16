@@ -1,2 +1,13 @@
 block header
-  h1 TVTG
+  block header-console
+    form#add.form-inline(method='post', action='/')
+      .input-prepend
+        .add-on.terminal-cursor
+        input#caption.input-xxlarge(type='text', name='caption', placeholder='caption', value=caption)
+      input#image.header-toggle.input-medium(type='text', name='image', placeholder='image')
+      input#title.header-toggle.input-medium(type='text', name='title', placeholder='title')
+      input#password.header-toggle.input-small(type='password', name='password', placeholder='password')
+      button#submit.header-toggle.btn(type='submit') Add !
+
+  block header-title
+    h1 TVTG
