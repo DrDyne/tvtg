@@ -5,6 +5,7 @@
 
 var express = require('express')
   , routes = require('./routes/index')
+  , filters= require('./routes/filters')
   , http   = require('http')
   , path   = require('path')
   , stylus = require('stylus')
@@ -43,9 +44,9 @@ app.configure('development', function(){
   app.use(express.errorHandler({dumpExceptions:true, showStack:true}));
 });
 
-app.get('/', routes.index);
-app.get('/posts/:id', routes.post);
-app.post('/', routes.insertPost);
+app.get('/', filters.isAdmin, routes.index);
+app.get('/posts/:id', filters.isAdmin, routes.post);
+app.post('/', filters.isAdmin, routes.insertPost);
 app.delete('/posts/:id', routes.deletePost);
 
 http.createServer(app).listen(app.get('port'), function(){
