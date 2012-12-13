@@ -2,26 +2,98 @@
 @media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/node_modules\/stylus\/lib\/functions\/index\.styl}line{font-family:\000031}}
 
 @media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\000031}}
-
-@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\000032}}
-.articles .tvtg {
-  width: auto;
-  padding-right: 10px;
+.centered,
+.articles .article .content,
+.articles .article .content .img img,
+.articles .article .separator {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\000035}}
-.articles .tvtg:before {
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\000036}}
+.tvtg-label {
   content: "T'es vraiment trop geek quand...";
 }
 
-@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\000037}}
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\000039}}
 
-@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\000038}}
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\0000311}}
+.articles .article {
+  margin-bottom: 60px;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\0000314}}
 .articles .article #controls {
   padding-left: 10px;
 }
 
-@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\0000310}}
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\0000316}}
 .articles .article #controls .delete-post {
   cursor: pointer;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\0000319}}
+.articles .article .tvtg {
+  padding-right: 20px;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\0000326}}
+.articles .article .title {
+  width: 100%;
+  line-height: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\0000334}}
+.articles .article .content {
+  overflow: hidden;
+  width: 600px;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\0000339}}
+.articles .article .content .img {
+  padding: 20px;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\0000341}}
+.articles .article .content .img img {
+  width: 400px;
+  height: auto;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\0000345}}
+.articles .article .content .controls {
+  float: right;
+  margin-right: 1px;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\0000348}}
+.articles .article .content .controls .deletePost {
+  margin-top: 1px;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\0000352}}
+.articles .article .footer {
+  font-size: 10px;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\0000354}}
+.articles .article .footer .author {
+  float: right;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\0000356}}
+.articles .article .footer .age {
+  float: right;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/articles\.styl}line{font-family:\0000358}}
+.articles .article .separator {
+  margin-top: 40px;
+  width: 33%;
+  border-bottom: 1px dotted #000;
 }

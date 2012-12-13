@@ -1,0 +1,3 @@
+var TVTG = { Models : {} 
+           , Views  : {}
+           };

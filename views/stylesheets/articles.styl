@@ -17,15 +17,20 @@
         cursor: pointer
 
     .tvtg
-      width: auto
-      padding-right: 10px
-      &:before
-        @extend .tvtg-label
+      padding-right: 20px
+      //width: auto
+      //padding-right: 10px
+      //&:before
+      //  @extend .tvtg-label
 
     .title
       //margin-left:216px
-      display: inline
-      text-overflow: clip
+      width: 100%
+      line-height: 40px
+      font-size: 30px
+      font-weight: bold
+      overflow: hidden
+      text-overflow: ellipsis
     .content
       @extend .centered
       overflow: hidden
@@ -38,11 +43,11 @@
           width: 400px
           height: auto
       .controls
-        float: right
+        float:right
+        margin-right:1px
         .deletePost
           margin-top: 1px
-          float:right
-          margin-right: -73px
+          //margin-right: -73px
 
     .footer
       font-size: 10px

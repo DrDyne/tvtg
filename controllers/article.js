@@ -1,16 +1,4 @@
 var sugar = require('sugar');
-var articleProvider = require('../mockArticles').ArticleProvider;
-
-/*
- * GET home page.
- */
-
-exports.index = function(req, res){
-  var articles = new ArticleProvider().findAll(function (err, articles) {
-    articles[0].ago = function () { return 'today' };
-    res.render('index', { caption: '', admin: req.admin, articles : articles });
-  });
-};
 
 exports.post = function(req, res) {
   // should fetch data from DB instead of this ugly mock

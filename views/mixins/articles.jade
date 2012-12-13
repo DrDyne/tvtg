@@ -1,13 +1,20 @@
 mixin render_article(article, admin)
   li.article
-    span.tvtg
-    h2.title=article.caption
+    .tvtg T'es vraiment trop geek quand...
+    .title=article.caption
     .content
       ul.controls.unstyled
         li.deletePost.control
           .input-prepend
             .add-on.delete-post: i.icon-remove
-            input.delete.input-mini(type='password', post=article.id, placeholder='delete')
+            /*input.delete.input-mini(type='password', post=article.id, placeholder='delete')*/
+        li.i-like.control
+          .input-prepend
+            .add-on.i-like-post: i.icon-thumbs-up
+        li.i-dont-like.control
+          .input-prepend
+            .add-on.i-like-post: i.icon-thumbs-down
+
       .img
         a(href='/posts/#{article.id}')
           img.img-polaroid(src=caption.image || '/images/trollface.png')

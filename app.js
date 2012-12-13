@@ -4,11 +4,11 @@
  */
 
 var express = require('express')
-  , routes = require('./routes/index')
-  , filters= require('./routes/filters')
   , http   = require('http')
   , path   = require('path')
   , stylus = require('stylus')
+  , controllers = require('./controllers')
+  , filters     = require('./filters')
   , app = express()
   ;
 
@@ -38,16 +38,18 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(express.static(__dirname + '/public'));
   app.use(app.router);
+  //app.use(filters.isAdmin);
 });
+
+app.get('/', controllers.Home.index);
+
+app.get('/posts/:id', controllers.ArticleController.post);
+app.post('/', controllers.ArticleController.insertPost);
+app.delete('/posts/:id', controllers.ArticleController.deletePost);
 
 app.configure('development', function(){
   app.use(express.errorHandler({dumpExceptions:true, showStack:true}));
 });
-
-app.get('/', filters.isAdmin, routes.index);
-app.get('/posts/:id', filters.isAdmin, routes.post);
-app.post('/', filters.isAdmin, routes.insertPost);
-app.delete('/posts/:id', routes.deletePost);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

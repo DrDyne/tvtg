@@ -3,11 +3,123 @@
 
 @media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/style\.styl}line{font-family:\000031}}
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0px 60px 0px 60px;
+  font: 14px "Monospace", "Monaco", "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 @media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/style\.styl}line{font-family:\000035}}
 a {
   color: #00b7ff;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/style\.styl}line{font-family:\000038}}
+/* meh own */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/style\.styl}line{font-family:\0000310}}
+.console,
+.header form .prompt,
+.header form .terminal-cursor,
+.header form #caption {
+  color: #fff;
+  font: 18px "Monospace" "Monaco";
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/style\.styl}line{font-family:\0000314}}
+.disapear,
+.header form .terminal-cursor,
+.header form #caption {
+  border: none;
+  background: transparent;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/style\.styl}line{font-family:\0000318}}
+/* end of meh own */
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/style\.styl}line{font-family:\0000320}}
+.welcome-title {
+  padding-top: 30px;
+  display: inline-block;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/style\.styl}line{font-family:\0000324}}
+.header {
+  z-index: 1;
+  width: 100%;
+  line-height: 26px;
+  vertical-align: middle;
+  top: 0px;
+  background: #000;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 30px;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/style\.styl}line{font-family:\0000335}}
+.header form {
+  margin: 0px;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/style\.styl}line{font-family:\0000336}}
+.header form .prompt {
+  display: inline-block;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/style\.styl}line{font-family:\0000340}}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/style\.styl}line{font-family:\0000343}}
+.header form #caption {
+  position: fixed;
+  display: inline;
+  width: 2000px;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/style\.styl}line{font-family:\0000349}}
+.header form .addPost {
+  margin: 30px auto 0px auto;
+  float: right;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/style\.styl}line{font-family:\0000352}}
+.header form .addPost #image,
+.header form .addPost #title,
+.header form .addPost #submit,
+.header form .addPost #password {
+  display: none;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/style\.styl}line{font-family:\0000355}}
+.menu {
+  z-index: 2;
+  line-height: 30px;
+  width: 100%;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/style\.styl}line{font-family:\0000359}}
+.menu .menu-item {
+  display: inline-block;
+  padding-right: 10px;
+  line-height: 20px;
+  vertical-align: middle;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/style\.styl}line{font-family:\0000364}}
+.menu .menu-item:before {
+  content: ' | ';
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/style\.styl}line{font-family:\0000366}}
+.menu .menu-item:first-child:before {
+  content: none;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/style\.styl}line{font-family:\0000368}}
+.menu .menu-item:last-child {
+  padding-right: 0px;
+  float: right;
+}
+
+@media -stylus-debug-info{filename{font-family:file\:\/\/\/home\/dyne\/git\/tvtg\/views\/stylesheets\/style\.styl}line{font-family:\0000371}}
+.menu .menu-item:last-child:before {
+  content: none;
 }

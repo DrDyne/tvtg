@@ -8,5 +8,5 @@
   }
 
 
-  bindDeletePostAnimation();
+  //bindDeletePostAnimation();
 });
